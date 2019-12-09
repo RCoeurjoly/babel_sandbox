@@ -1,3 +1,0 @@
-/home/rcl/babel_sandbox/build/CMakeFiles/rebuild_cache.dir
-/home/rcl/babel_sandbox/build/CMakeFiles/edit_cache.dir
-/home/rcl/babel_sandbox/build/CMakeFiles/foo.dir

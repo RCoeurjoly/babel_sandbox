@@ -1,1 +1,0 @@
-/home/rcl/scripts/clang_complete_args.py  g++     CMakeFiles/foo.dir/foo.cpp.o  -o foo 
