@@ -1,0 +1,4 @@
+-I/home/rcl/doctest/doctest
+-I/home/rcl/babel_sandbox
+-I/home/rcl/babel_sandbox/includes
+-I/usr/include/c++

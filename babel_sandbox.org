@@ -499,7 +499,6 @@ def findPalindrome(s):
 
 #+end_src
 
-
 ** Sandbox
    #+begin_src python :results output
 # -*- coding: utf-8 -*-
@@ -1136,3 +1135,8 @@ public:
 };
 
 /*
+#+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory>
+#+HEADER: :flags -std=c++11
+#+begin_src C++ :results output
+
+#+end_src
