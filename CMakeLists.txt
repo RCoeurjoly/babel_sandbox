@@ -10,8 +10,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_executable(foo foo.cpp)
 
 target_include_directories(foo PUBLIC
-  "/home/rcl/doctest/doctest"
-  "/home/rcl/babel_sandbox"
-  "/home/rcl/babel_sandbox/includes"
+  "~/doctest/doctest"
+  "~/babel_sandbox"
+  "~/babel_sandbox/includes"
   "/usr/include/c++"
   )
