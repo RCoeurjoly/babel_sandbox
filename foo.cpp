@@ -1,9 +1,9 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include <iostream>
-#include <string>
+#include "foo.h"
 #include "doctest.h"
 #include "my_library.h"
-#include "foo.h"
+#include <iostream>
+#include <string>
 
 TEST_CASE("testing the factorial function") {
   std::string loo = "lol";

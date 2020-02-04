@@ -461,6 +461,25 @@ def detectCycle(self, head):
         return slow
 #+end_src
 
+*** findMedianSortedArrays
+    #+begin_src python :results output
+# -*- coding: utf-8 -*-
+def findMedianSortedArrays(list1, list2):
+    joined_list = sorted(list1 + list2)
+    # Odd number of items
+    n_items = len(joined_list)
+    if n_items%2 == 1:
+        return joined_list[n_items/2]
+    return (joined_list[n_items/2] + joined_list[n_items/2-1])/2.0
+
+def test_findMedianSortedArrays():
+    assert findMedianSortedArrays([1, 3], [2]) == 2
+    assert findMedianSortedArrays([1, 2], [3, 4]) == 2.5
+test_findMedianSortedArrays()
+#+end_src
+
+#+RESULTS:
+
 *** Intersection
     #+begin_src python :results output
 # -*- coding: utf-8 -*-
@@ -551,6 +570,39 @@ return 0;
        *((uint64_t*)&sit_record->_trading_status_str[8]) = 0;
                                                        ^
    #+end_quote
+** Compare
+   #+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory>
+   #+HEADER: :flags -std=c++11
+   #+begin_src C++ :results output
+std::string first = "lol";
+std::string second = "lol";
+if (!first.compare(second)) {
+  std::cout << "comparison success" << "\n";
+}
+else {
+  std::cout << "comparison fail" << "\n";
+}
+   #+end_src
+
+   #+RESULTS:
+   : comparison success
+** substring
+   #+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory>
+   #+HEADER: :flags -std=c++11
+   #+begin_src C++ :results output
+std::string EURUSD = "EURUSD";
+std::string EURUS = "EURUS";
+std::string EUR = "EU";
+std::cout << EURUSD.substr(0, 3) << "\n";
+std::cout << EURUSD.substr(3, 3) << "\n";
+std::cout << EURUS.substr(0, 3) << "\n";
+std::cout << EURUS.substr(3, 3) << "\n";
+//std::cout << EUR.substr(0, 3) << "\n";
+//std::cout << EUR.substr(3, 3) << "\n";
+   #+end_src
+
+   #+RESULTS:
+
 ** warning: array subscript is above array bounds [-Warray-bounds]
    #+begin_quote
 _read_buffer[OMS::BufferSize_DEFAULT] = {0};;
@@ -726,6 +778,28 @@ obj->Method2 ();  //  Prints "Derived::Method2"
 #+RESULTS:
 : Base::Method1
 : Derived::Method2
+** TODO Reflexion
+#+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory>
+#+HEADER: :flags -std=c++11
+#+begin_src C++ :results output
+#include <boost/fusion/sequence.hpp>
+#include <boost/fusion/include/sequence.hpp>
+#include <string>
+#include <iostream>
+
+struct Base { char a; };            // Adapt
+
+void print(Base const& b) { boost::fusion::for_each<Base>(b, Print()); }
+
+int main(){
+  Base my_struct;
+  my_struct.a = "a";
+  print(my_struct);
+}
+#+end_src
+
+#+RESULTS:
+
 ** Design patterns
 *** Creational Patterns
 **** Builder
@@ -1140,3 +1214,18 @@ public:
 #+begin_src C++ :results output
 
 #+end_src
+** ABS
+   #+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory>
+   #+HEADER: :flags -std=c++11
+   #+begin_src C++ :results output
+std::cout << std::numeric_limits<int64_t>::max() << "\n";
+std::cout << std::numeric_limits<int64_t>::min() << "\n";
+std::cout << std::abs(std::numeric_limits<int64_t>::max()) << "\n";
+std::cout << std::abs(std::numeric_limits<int64_t>::min()) << "\n";
+   #+end_src
+
+   #+RESULTS:
+   : 9223372036854775807
+   : -9223372036854775808
+   : 9223372036854775807
+   : -9223372036854775808
