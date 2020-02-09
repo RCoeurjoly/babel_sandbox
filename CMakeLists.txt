@@ -12,7 +12,10 @@ add_executable(foo foo.cpp)
 
 target_include_directories(foo PUBLIC
   "~/doctest/doctest"
+  "/doctest/doctest"
   "~/babel_sandbox"
+  "/babel_sandbox"
   "~/babel_sandbox/includes"
+  "/babel_sandbox/includes"
   "/usr/include/c++"
   )
