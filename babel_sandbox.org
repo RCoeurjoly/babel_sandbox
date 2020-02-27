@@ -602,6 +602,22 @@ std::cout << EURUS.substr(3, 3) << "\n";
    #+end_src
 
    #+RESULTS:
+** Boost
+*** Version
+    #+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory> <bits/stdc++.h> <set>
+    #+HEADER: :flags -std=c++17
+    #+begin_src C++ :results output
+#include <boost/version.hpp>
+std::cout << "Using Boost "
+          << BOOST_VERSION / 100000     << "."  // major version
+          << BOOST_VERSION / 100 % 1000 << "."  // minor version
+          << BOOST_VERSION % 100                // patch level
+          << std::endl;
+    #+end_src
+
+    #+RESULTS:
+    : Using Boost 1.58.0
+
 
 ** warning: array subscript is above array bounds [-Warray-bounds]
    #+begin_quote
