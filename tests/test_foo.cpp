@@ -7,7 +7,7 @@
 
 TEST_CASE("testing the factorial function") {
   std::string loo = "lol";
-  CHECK(foo::factorial(0) == 1);
+  CHECK(foo::factorial(0) == 0);
   CHECK(foo::factorial(1) == 1);
   CHECK(foo::factorial(2) == 2);
   CHECK(factorial_of_3() == 6);
