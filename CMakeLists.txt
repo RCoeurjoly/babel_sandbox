@@ -11,7 +11,7 @@ set(CMAKE_BUILD_TYPE Debug)
 # add the executable
 add_executable(test_foo ${PROJECT_SOURCE_DIR}/tests/test_foo.cpp)
 add_test(NAME mytest
-  COMMAND foo)
+  COMMAND test_foo)
 target_include_directories(test_foo PUBLIC
   "~/doctest/doctest"
   "/doctest/doctest"
