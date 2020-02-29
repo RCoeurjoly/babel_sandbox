@@ -1,4 +1,8 @@
+-I/babel_sandbox
+-I/babel_sandbox/includes
+-I/doctest/doctest
 -I/home/rcl/babel_sandbox
 -I/home/rcl/babel_sandbox/includes
 -I/home/rcl/doctest/doctest
 -I/usr/include/c++
+-std=gnu++11
