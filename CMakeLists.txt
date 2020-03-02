@@ -27,11 +27,7 @@ target_include_directories(test_foo PUBLIC
   )
 
 add_subdirectory(tests)
-
-
-
-
-cmake_minimum_required(VERSION 3.1)
+find_package(Boost 1.67.0)
 
 if(NOT CMAKE_VERSION VERSION_LESS "3.3")
     # Don't ignore visibility related properties for non-SHARED targets
