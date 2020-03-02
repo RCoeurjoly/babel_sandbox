@@ -15,7 +15,7 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
 
 # add the executable
 add_executable(test_foo ${PROJECT_SOURCE_DIR}/tests/test_foo.cpp)
-add_test(NAME unit_test COMMAND test_foo)
+add_test(NAME unit_test COMMAND test_foo -s)
 target_include_directories(test_foo PUBLIC
   ${PROJECT_SOURCE_DIR}
   ${PROJECT_SOURCE_DIR}/doctest/doctest
