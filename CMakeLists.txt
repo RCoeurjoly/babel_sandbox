@@ -15,15 +15,11 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
 
 # add the executable
 add_executable(test_foo ${PROJECT_SOURCE_DIR}/tests/test_foo.cpp)
-add_test(NAME mytest
-  COMMAND test_foo)
+add_test(NAME unit_test COMMAND test_foo)
 target_include_directories(test_foo PUBLIC
-  "~/doctest/doctest"
-  "/doctest/doctest"
-  "~/babel_sandbox"
-  "/babel_sandbox"
-  "~/babel_sandbox/includes"
-  "/babel_sandbox/includes"
+  ${PROJECT_SOURCE_DIR}
+  ${PROJECT_SOURCE_DIR}/doctest/doctest
+  ${PROJECT_SOURCE_DIR}/includes
   "/usr/include/c++"
   )
 
