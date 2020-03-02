@@ -1,22 +1,7 @@
-project(FeatureShowcase)
-
-message(STATUS "Trying to build cucumber test" ${TARGET})
+project(ageCalculator)
 
 if(TARGET GTest::GTest)
-  message(STATUS "Building cucumber test")
-  function(add_cucumber_executable)
-    add_executable(FeatureShowcaseSteps ${ARGV})
-    target_link_libraries(FeatureShowcaseSteps PRIVATE cucumber-cpp GTest::GTest)
-    foreach(_arg ${ARGN})
-      get_filename_component(OBJECT_PREFIX ${_arg} NAME_WE)
-      set_source_files_properties(${_arg} PROPERTIES COMPILE_FLAGS "-DCUKE_OBJECT_PREFIX=${OBJECT_PREFIX}")
-    endforeach(_arg)
-  endfunction()
-
-  add_cucumber_executable(
-    features/step_definitions/TagSteps
-    features/step_definitions/TableSteps
-    )
-
-  message(STATUS "Finishing to build cucumber test")
+  add_executable(ageCalculator features/step_definitions/ageCalculator)
+  target_link_libraries(ageCalculator PRIVATE cucumber-cpp GTest::GTest)
+  add_test(NAME ageCalculatorTest COMMAND /home/rcl/cucumber-cpp/ageTest.sh)
 endif()
