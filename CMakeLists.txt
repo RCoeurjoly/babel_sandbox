@@ -19,9 +19,7 @@ add_test(NAME unit_test COMMAND test_foo -s)
 target_include_directories(test_foo PUBLIC
   ${PROJECT_SOURCE_DIR}
   ${PROJECT_SOURCE_DIR}/doctest/doctest
-  #doctest/doctest
   ${PROJECT_SOURCE_DIR}/includes
-  #includes
   "/usr/include/c++"
   )
 
