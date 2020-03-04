@@ -524,7 +524,7 @@ def findPalindrome(s):
 
 #+end_src
 
-* CPP
+* C++
 ** Maps
    #+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h>
    #+HEADER: :flags -std=c++11
@@ -1245,3 +1245,6 @@ std::cout << std::abs(std::numeric_limits<int64_t>::min()) << "\n";
    : -9223372036854775808
    : 9223372036854775807
    : -9223372036854775808
+* Bash
+* Lisp
+* SQL
