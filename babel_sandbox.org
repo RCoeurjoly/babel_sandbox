@@ -1246,3 +1246,5 @@ std::cout << std::abs(std::numeric_limits<int64_t>::min()) << "\n";
    : 9223372036854775807
    : -9223372036854775808
 * Bash
+* Lisp
+* SQL
