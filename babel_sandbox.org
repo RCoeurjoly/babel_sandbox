@@ -618,7 +618,6 @@ std::cout << "Using Boost "
     #+RESULTS:
     : Using Boost 1.58.0
 
-
 ** warning: array subscript is above array bounds [-Warray-bounds]
    #+begin_quote
 _read_buffer[OMS::BufferSize_DEFAULT] = {0};;
@@ -815,6 +814,36 @@ int main(){
 #+end_src
 
 #+RESULTS:
+** Strings and chars and ASCII
+   #+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory> <bits/stdc++.h> <set>
+   #+HEADER: :flags -std=c++11
+   #+begin_src C++ :results output
+std::string my_string = "Roland";
+char my_char = my_string[0];
+std::cout << my_char;
+   #+end_src
+
+   #+RESULTS:
+   : R
+
+
+#+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory> <bits/stdc++.h> <set>
+#+HEADER: :flags -std=c++11
+#+begin_src C++ :results output
+int asciiValue = 65;
+char character = char(asciiValue);
+std::cout << character << "\n"; // output: A
+std::cout << char(90) << "\n"; // output: Z
+int side = 49;
+char char_side = char(side);
+std::cout << char_side << "\n";
+#+end_src
+
+#+RESULTS:
+: A
+: Z
+: 1
+
 
 ** Design patterns
 *** Creational Patterns
@@ -1245,6 +1274,60 @@ std::cout << std::abs(std::numeric_limits<int64_t>::min()) << "\n";
    : -9223372036854775808
    : 9223372036854775807
    : -9223372036854775808
+** Operator overloading
+*** ostream
+    #+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory> <bits/stdc++.h> <set>
+    #+HEADER: :flags -std=c++11
+    #+begin_src C++ :results output
+
+// C++ program to print vector objects
+// by overloading "<<" operator
+#include <iostream>
+#include <vector>
+using namespace std;
+
+// C++ template to print vector container elements
+template <typename T>
+ostream& operator<<(ostream& os, const vector<T>& v)
+{
+    os << "[";
+    for (int i = 0; i < v.size(); ++i) {
+        os << v[i];
+        if (i != v.size() - 1)
+            os << ", ";
+    }
+    os << "]\n";
+    return os;
+}
+
+// Driver code
+int main()
+{
+    vector<int> vec{ 4, 2, 17, 11, 15 };
+
+    // Printing the elements directly
+    cout << vec;
+
+    return 0;
+}
+
+    #+end_src
+
+    #+RESULTS:
+    : [4, 2, 17, 11, 15]
+
+
+
+#+HEADER: :includes <iostream> <numeric> <vector> <stdexcept> <fstream> <sstream> <map> <string> <algorithm> <stdio.h> <memory> <bits/stdc++.h> <set>
+#+HEADER: :flags -std=c++11
+#+begin_src C++ :results output
+auto v = std::vector<int>{1, 2, 3};
+std::copy(begin(v), end(v), std::ostream_iterator<int>(std::cout, " "));
+#+end_src
+
+#+RESULTS:
+: 1 2 3
+
 * Bash
 * Lisp
 * SQL
