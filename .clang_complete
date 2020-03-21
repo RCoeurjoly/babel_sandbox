@@ -1,8 +1,5 @@
--I/babel_sandbox
--I/babel_sandbox/includes
--I/doctest/doctest
--I/home/rcl/babel_sandbox
--I/home/rcl/babel_sandbox/includes
--I/home/rcl/doctest/doctest
+-I/home/drcoeurjoly/babel_sandbox
+-I/home/drcoeurjoly/babel_sandbox/doctest/doctest
+-I/home/drcoeurjoly/babel_sandbox/includes
 -I/usr/include/c++
 -std=gnu++11
