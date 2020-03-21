@@ -18,4 +18,4 @@ jobs:
     - name: build project
       run: make -C build/ all
     - name: make test
-      run: make -C build/ test
+      run: cmake -E chdir build ctest -V
