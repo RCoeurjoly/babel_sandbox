@@ -1,0 +1,4 @@
+#+TITLE: 2020-04-12
+
+Trying org-roam
+[[file:20200412134256-literate_programming.org][literate programming]]
